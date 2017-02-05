@@ -76,11 +76,11 @@ app.get('/page1', function (req, res) {
 });
 
 app.get('/page2', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'pageTwo.html'));
+   res.send(createTemplate(pageTwo));
 });
 
 app.get('/page3', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'pageThree.html'));
+  res.send(createTemplate(pageThree));
 });
 
 app.get('/ui/style.css', function (req, res) {
