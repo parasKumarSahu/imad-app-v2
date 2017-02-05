@@ -15,6 +15,26 @@ var pageOne = {
          <p>This is the the first page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
 };
 
+var pageTwo = {
+    title:'pageTwo',
+    heading: 'Welcome to pageTwo',
+    date: '2st january',
+    content:` 
+         <p>This is the the second page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
+         <p>This is the the second page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
+         <p>This is the the second page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
+};
+
+var pageThree = {
+    title:'pageThree',
+    heading: 'Welcome to pageThree',
+    date: '1st january',
+    content:` 
+         <p>This is the the third page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
+         <p>This is the the third page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
+         <p>This is the the third page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
+};
+
 function createTemplate (data) {
 var title = data.title;
 var date = data.date;
