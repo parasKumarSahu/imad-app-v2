@@ -13,27 +13,7 @@ var pageOne = {
          <p>This is the the first page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
          <p>This is the the first page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
          <p>This is the the first page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
- };
-// ,
-// 'pageTwo' : {
-    title:'pageTwo',
-    heading: 'Welcome to pageTwo',
-    date: '2st january',
-    content:` 
-         <p>This is the the second page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
-         <p>This is the the second page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
-         <p>This is the the second page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
- },
-// 'pageThree' : {
-         title:'pageThree',
-    heading: 'Welcome to pageThree',
-    date: '1st january',
-    content:` 
-         <p>This is the the third page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
-         <p>This is the the third page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
-         <p>This is the the third page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
- }
-//};
+};
 
 function createTemplate (data) {
 var title = data.title;
@@ -71,8 +51,16 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/pageOne', function (req, res) {
+app.get('/page1', function (req, res) {
  res.send(createTemplate(pageOne));
+});
+
+app.get('/page2', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'pageTwo.html'));
+});
+
+app.get('/page3', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'pageThree.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
