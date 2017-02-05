@@ -5,8 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var pages = {
- 'pageOne' : {
+var pageOne = {
     title:'pageOne',
     heading: 'Welcome to pageOne',
     date: '1st january',
@@ -14,8 +13,9 @@ var pages = {
          <p>This is the the first page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
          <p>This is the the first page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
          <p>This is the the first page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
- },
- 'pageTwo' : {
+ };
+// ,
+// 'pageTwo' : {
     title:'pageTwo',
     heading: 'Welcome to pageTwo',
     date: '2st january',
@@ -24,7 +24,7 @@ var pages = {
          <p>This is the the second page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
          <p>This is the the second page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
  },
- 'pageThree' : {
+// 'pageThree' : {
          title:'pageThree',
     heading: 'Welcome to pageThree',
     date: '1st january',
@@ -33,7 +33,7 @@ var pages = {
          <p>This is the the third page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
          <p>This is the the third page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
  }
-};
+//};
 
 function createTemplate (data) {
 var title = data.title;
@@ -71,8 +71,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:pageNo', function (req, res) {
- res.send(createTemplate(pages[pageNo]));
+app.get('/pageOne', function (req, res) {
+ res.send(createTemplate(pageOne));
 });
 
 app.get('/ui/style.css', function (req, res) {
