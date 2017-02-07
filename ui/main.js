@@ -44,6 +44,6 @@ button.onclick = function () {
        }
     };
     //making the rquest declaration
-    request.span('GET',"http://paraskumarsahu.imad.hasura-app.io/counter",true);
-    request.span(null);
+    request.open('GET',"http://paraskumarsahu.imad.hasura-app.io/counter",true);
+    request.send(null);
 };
