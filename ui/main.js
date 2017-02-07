@@ -43,7 +43,7 @@ button.onclick = function () {
                span.innerHTML = counter.toString();
            }
        }
-    }
+    };
     //making the rquest declaration
     request.span('GET',"http://paraskumarsahu.imad.hasura-app.io/counter",true);
     request.span(null);
