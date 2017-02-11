@@ -20,7 +20,7 @@ body {
 
 .img-medium {
     height: 200px;
-    background-color:none;
+    background-color:transparent;
 }
 
 div{
