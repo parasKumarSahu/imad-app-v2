@@ -49,8 +49,6 @@ button.onclick = function () {
 };
 
 //submit name
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
 
 submit.onclick = function () {
@@ -74,6 +72,9 @@ submit.onclick = function () {
            }
        }
     };
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
+
     //making the rquest declaration
     request.open('GET',"http://paraskumarsahu.imad.hasura-app.io/submit-name?name="+name, true);
     request.send(null);
