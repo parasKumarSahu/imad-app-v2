@@ -12,7 +12,7 @@ function moveRight () {
     }    
     else
     {
-        marginLeft=0;
+        marginLeft=250;
     }
         img.style.marginLeft = marginLeft + 'px';
 }
