@@ -8,6 +8,7 @@ body {
 
 .center {
     text-align: center;
+    background-color:transparent;
 }
 
 .text-big {
@@ -20,8 +21,7 @@ body {
 
 .img-medium {
     height: 200px;
-    background-color:transparent;
-}
+ }
 
 div{
     background-color:orange;
