@@ -10,6 +10,10 @@ function moveRight () {
     {
         marginLeft = marginLeft+1;
     }    
+    else
+    {
+        marginLeft=0;
+    }
         img.style.marginLeft = marginLeft + 'px';
 }
 
