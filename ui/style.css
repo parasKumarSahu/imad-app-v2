@@ -7,15 +7,11 @@ html {
 }
 
 body {
-    font-family: Callibri,sans-serif;
+    font-family: Arial,sans-serif;
     margin-top: 75px;
     margin-left: 200px;
     margin-right: 200px;
     border:double #d0c9c0 20px;
-    text-align: center;
-}
-
-.center {
     text-align: center;
 }
 
