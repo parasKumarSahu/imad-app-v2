@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Callibri,sans-serif;
     margin-top: 75px;
     margin-left: 200px;
     margin-right: 200px;
@@ -28,5 +28,6 @@ body {
 
 .img-medium {
     height: 200px;
+    border:double #d0c9c0 10px;
  }
 
