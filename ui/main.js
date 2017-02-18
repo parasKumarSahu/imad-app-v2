@@ -86,3 +86,4 @@ submit.onclick = function () {
     request.open('GET',"http://paraskumarsahu.imad.hasura-app.io/submit-name?name="+name, true);
     request.send(null);
 
+}
