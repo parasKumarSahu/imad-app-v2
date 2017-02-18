@@ -42,6 +42,19 @@
               <a href="/page2">PAGE-TWO &nbsp</a>
               <a href="/page3">PAGE-THREE &nbsp</a>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script>
+        <script>
+                      $("#dog-pic").on("click", function(event) {
+                        var $dot = $("<div></div>");
+                        $dot.css("position","absolute");
+                        $dot.css("top",event.pageY+"px");
+                        $dot.css("left",event.pageX+"px");
+                        $dot.addClass("dot");
+                        $dot.appendTo("body");
+                       });
+  
+        </script>
        <script type="text/javascript" src="/ui/main.js">    </script> 
         
     </body>
