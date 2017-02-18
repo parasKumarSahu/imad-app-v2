@@ -86,5 +86,12 @@ submit.onclick = function () {
     request.open('GET',"http://paraskumarsahu.imad.hasura-app.io/submit-name?name="+name, true);
     request.send(null);
 
-   
+   $("#dog-pic").on("click", function(event) {
+        var $dot = $("<div></div>");
+        $dot.css("position","absolute");
+        $dot.css("top",event.pageY+"px");
+        $dot.css("left",event.pageX+"px");
+        $dot.addClass("dot");
+        $dot.appendTo("body");
+    });
 };
