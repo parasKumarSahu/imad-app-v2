@@ -99,6 +99,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 
 app.get( '/:pageName' , function (req, res) {
+ var pageName = req.params.pageName;   
  res.send(createTemplate(pages[pageName]));
 });
 
