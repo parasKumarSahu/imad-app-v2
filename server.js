@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var pages = {
-  'page-one': {
+  'pageone': {
     title: 'pageOne',
     heading: 'Welcome to pageOne',
     date: '1st january',
@@ -15,7 +15,7 @@ var pages = {
          <p>This is the the first page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
          <p>This is the the first page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
     },
-  'page-two': {
+  'pagetwo': {
     title:'pageTwo',
     heading: 'Welcome to pageTwo',
     date: '2st january',
@@ -24,7 +24,7 @@ var pages = {
          <p>This is the the second page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
          <p>This is the the second page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
     },
-  'page-three': {
+  'pagethree': {
     title:'pageThree',
     heading: 'Welcome to pageThree',
     date: '1st january',
@@ -86,7 +86,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:pageName', function (req, res) {
- res.send(createTemplate(pages[page-one]));
+ res.send(createTemplate(pages[pageName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
