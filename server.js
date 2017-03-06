@@ -94,9 +94,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var Pool = new Pool(config);
+var pool = new Pool(config);
 app.get('/test-db' , function(res, req) {
-   Pool.query('SELECT * FROM user' , function(err, result){
+   pool.query('SELECT * FROM user' , function(err, result){
        if(err){
            res.status(500).send(err.toString());
        }else{
