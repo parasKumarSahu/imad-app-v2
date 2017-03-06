@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var pages = {
-  'pageOne': {
+  'page-1': {
     title: 'pageOne',
     heading: 'Welcome to pageOne',
     date: '1st january',
@@ -15,7 +15,7 @@ var pages = {
          <p>This is the the first page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
          <p>This is the the first page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
     },
-  'pageTwo': {
+  'page-2': {
     title:'pageTwo',
     heading: 'Welcome to pageTwo',
     date: '2st january',
@@ -24,7 +24,7 @@ var pages = {
          <p>This is the the second page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>
          <p>This is the the second page of first website belonging to paras kumar, a first year computer sience btech student at IIT ROPAR</p>`
     },
-  'pageThree': {
+  'page-3': {
     title:'pageThree',
     heading: 'Welcome to pageThree',
     date: '1st january',
