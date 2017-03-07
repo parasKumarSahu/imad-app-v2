@@ -95,12 +95,19 @@ app.get('/', function (req, res) {
 });
 
 var pool = new Pool(config);
-app.get('/t' , function (req, res) {
-   pool.query('SELECT * FROM "userName"' , function(err, result){
+app.get('/articles/:articleName' , function (req, res) {
+   pool.query('SELECT * FROM "articles" WHERE title = $1', [req.params.articleName], function(err, result){
        if(err){
            res.status(500).send(err.toString());
        }else{
-           res.send(JSON.stringify(result.rows));
+           if(result.rows.length === 0)
+           {
+            res.status(404).send('Article not found');
+           }    
+           else{    
+            var articleData = result.rows[0];   
+            res.send(createTemplate(pages[articleData]));
+           }
        }
    }); 
 });
@@ -115,12 +122,6 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
-});
-
-
-app.get( '/:pageName' , function (req, res) {
- var pageName = req.params.pageName;   
- res.send(createTemplate(pages[pageName]));
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
